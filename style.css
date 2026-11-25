@@ -1,0 +1,399 @@
+   :root {
+       --bg: #FAE6D8;
+       --primary: #A3BF6F;
+       --accent: #FF8234;
+       --text: #1A1A1A;
+       --muted: #4A4A4A;
+       --nav-height: 68px;
+   }
+
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+
+   html {
+       scroll-behavior: smooth;
+   }
+
+   body {
+       font-family: 'Inter', sans-serif;
+       background: #e5e5e5;
+       padding-top: var(--nav-height);
+       color: var(--text);
+   }
+
+   /* NAVBAR */
+   .navbar {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       height: var(--nav-height);
+       background: rgba(255, 255, 255, 0.96);
+       backdrop-filter: blur(10px);
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 0 32px;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+       z-index: 1000;
+   }
+
+   .nav-logo {
+       font-family: 'Montserrat', sans-serif;
+       font-weight: 800;
+       font-size: 22px;
+       color: var(--text);
+       letter-spacing: -0.5px;
+   }
+
+   .nav-links {
+       display: flex;
+       gap: 6px;
+       overflow-x: auto;
+   }
+
+   .nav-links a {
+       text-decoration: none;
+       color: var(--muted);
+       font-weight: 600;
+       font-size: 13px;
+       padding: 7px 11px;
+       border-radius: 8px;
+       transition: all 0.2s;
+       white-space: nowrap;
+   }
+
+   .nav-links a:hover {
+       background: var(--bg);
+       color: var(--accent);
+   }
+
+   .print-btn {
+       padding: 10px 18px;
+       background: var(--accent);
+       color: white;
+       border: none;
+       border-radius: 8px;
+       font-size: 14px;
+       font-weight: 700;
+       cursor: pointer;
+       margin-left: 16px;
+       white-space: nowrap;
+   }
+
+   .print-btn:active {
+       transform: scale(0.96);
+   }
+
+   /* СЛАЙДЫ */
+   .slide {
+       width: 1280px;
+       height: 720px;
+       background-color: var(--bg);
+       padding: 48px 56px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       margin: 32px auto;
+       position: relative;
+       overflow: hidden;
+       border-radius: 16px;
+       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
+       scroll-margin-top: calc(var(--nav-height) + 16px);
+   }
+
+   .slide.column-slide {
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+   }
+
+   .content {
+       flex: 0.85;
+       padding-right: 40px;
+       z-index: 2;
+   }
+
+   /* КОНТЕЙНЕР ПОД ТВОИ СКРИНШОТЫ */
+   .image-container {
+       flex: 1.15;
+       height: 100%;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       z-index: 2;
+   }
+
+   .image-container img {
+       max-width: 100%;
+       max-height: 100%;
+       border-radius: 14px;
+       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14), 0 0 0 1px rgba(0, 0, 0, 0.06);
+       object-fit: contain;
+       background: #fff;
+   }
+
+   .image-grid-2 {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 16px;
+       width: 100%;
+       height: 100%;
+       align-items: center;
+   }
+
+   .image-grid-2 img {
+       width: 100%;
+       height: 100%;
+       max-height: 580px;
+       object-fit: contain;
+       border-radius: 12px;
+       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.06);
+       background: #fff;
+   }
+
+   /* ТЕКСТ */
+   h1 {
+       font-family: 'Montserrat', sans-serif;
+       font-size: 54px;
+       font-weight: 800;
+       color: var(--text);
+       margin-bottom: 20px;
+       line-height: 1.08;
+   }
+
+   h2 {
+       font-family: 'Montserrat', sans-serif;
+       font-size: 36px;
+       font-weight: 800;
+       color: var(--text);
+       margin-bottom: 18px;
+       line-height: 1.15;
+   }
+
+   p {
+       font-size: 19px;
+       color: var(--muted);
+       line-height: 1.55;
+       margin-bottom: 16px;
+   }
+
+   .highlight {
+       color: var(--accent);
+       font-weight: 700;
+   }
+
+   .badge {
+       background: var(--primary);
+       color: white;
+       padding: 6px 16px;
+       border-radius: 20px;
+       font-size: 14px;
+       font-weight: 700;
+       display: inline-block;
+       margin-bottom: 18px;
+       text-transform: uppercase;
+       letter-spacing: 0.8px;
+   }
+
+   .badge-warn {
+       background: var(--accent);
+   }
+
+   .feature-list {
+       list-style: none;
+       margin-top: 12px;
+   }
+
+   .feature-list li {
+       font-size: 17px;
+       color: var(--text);
+       margin-bottom: 12px;
+       padding-left: 28px;
+       position: relative;
+       line-height: 1.45;
+   }
+
+   .feature-list li::before {
+       content: '✓';
+       position: absolute;
+       left: 0;
+       top: 0;
+       color: var(--primary);
+       font-weight: 800;
+       font-size: 19px;
+   }
+
+   .blob {
+       position: absolute;
+       background: var(--primary);
+       opacity: 0.14;
+       border-radius: 50%;
+       z-index: 1;
+   }
+
+   .blob-1 {
+       width: 580px;
+       height: 580px;
+       top: -180px;
+       right: -180px;
+   }
+
+   .blob-2 {
+       width: 420px;
+       height: 420px;
+       bottom: -180px;
+       left: -140px;
+       background: var(--accent);
+       opacity: 0.08;
+   }
+
+   /* ТАРИФЫ (4 КОЛОНКИ) */
+   .pricing-grid {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 16px;
+       margin-top: 14px;
+       width: 100%;
+       z-index: 2;
+   }
+
+   .price-card {
+       background: #FFFFFF;
+       padding: 22px 18px;
+       border-radius: 16px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       border: 2px solid transparent;
+       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+       position: relative;
+   }
+
+   .price-card.popular {
+       border-color: var(--primary);
+       box-shadow: 0 10px 28px rgba(163, 191, 111, 0.25);
+   }
+
+   .price-card.vip {
+       border-color: var(--accent);
+   }
+
+   .card-tag {
+       position: absolute;
+       top: -12px;
+       left: 50%;
+       transform: translateX(-50%);
+       background: var(--primary);
+       color: white;
+       font-size: 11px;
+       font-weight: 800;
+       padding: 4px 12px;
+       border-radius: 12px;
+       white-space: nowrap;
+       text-transform: uppercase;
+   }
+
+   .card-tag.orange {
+       background: var(--accent);
+   }
+
+   .plan-name {
+       font-family: 'Montserrat', sans-serif;
+       font-size: 20px;
+       font-weight: 800;
+       margin-bottom: 6px;
+   }
+
+   .plan-sub {
+       font-size: 13px;
+       color: var(--muted);
+       margin-bottom: 14px;
+       min-height: 34px;
+   }
+
+   .price {
+       font-size: 26px;
+       font-weight: 800;
+       color: var(--accent);
+       font-family: 'Montserrat', sans-serif;
+       margin-bottom: 4px;
+   }
+
+   .price-monthly {
+       font-size: 13px;
+       font-weight: 700;
+       color: var(--text);
+       margin-bottom: 14px;
+       padding-bottom: 12px;
+       border-bottom: 1px solid #EEE;
+   }
+
+   .plan-features {
+       list-style: none;
+       font-size: 13px;
+       color: var(--muted);
+       line-height: 1.45;
+   }
+
+   .plan-features li {
+       margin-bottom: 8px;
+       padding-left: 18px;
+       position: relative;
+   }
+
+   .plan-features li::before {
+       content: '•';
+       position: absolute;
+       left: 4px;
+       color: var(--primary);
+       font-weight: 900;
+   }
+
+   .deadline-banner {
+       width: 100%;
+       background: #1A1A1A;
+       color: #FFFFFF;
+       padding: 12px 20px;
+       border-radius: 12px;
+       font-size: 14px;
+       font-weight: 600;
+       margin-top: 16px;
+       text-align: center;
+       z-index: 2;
+   }
+
+   .deadline-banner span {
+       color: var(--accent);
+       font-weight: 800;
+   }
+
+   @media print {
+       @page {
+           size: 1280px 720px;
+           margin: 0;
+       }
+
+       body {
+           background: white;
+           padding-top: 0;
+       }
+
+       .navbar {
+           display: none;
+       }
+
+       .slide {
+           margin: 0;
+           page-break-after: always;
+           break-after: page;
+           border-radius: 0;
+           box-shadow: none;
+           width: 1280px;
+           height: 720px;
+           scroll-margin-top: 0;
+       }
+   }

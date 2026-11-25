@@ -4,15 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>LINE — Коммерческое предложение и презентация</title>
-    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="navbar">
-        <div class="nav-logo">LINE • line-crm.com</div>
+    <nav class="navbar" aria-label="Навигация по презентации">
+        <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="nav-logo">LINE •
+            line-crm.com</a>
         <div class="nav-links">
             <a href="#sec1">Вход</a>
             <a href="#sec2">Кухня</a>
@@ -22,235 +27,283 @@
             <a href="#sec6">Списания</a>
             <a href="#sec7">ТТК и Отчёты</a>
             <a href="#sec8">Тарифы</a>
-            <a href="#sec9">Старт</a>
+            <a href="#sec9">Контакты</a>
         </div>
-        <button class="print-btn" onclick="window.print()">📥 Скачать PDF</button>
+        <button type="button" class="print-btn" onclick="window.print()">📥 Скачать PDF</button>
     </nav>
 
-    <div class="slide" id="sec1">
+    <!-- СЛАЙД 1: ВХОД -->
+    <section class="slide" id="sec1">
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="content">
             <div class="badge">B2B SaaS для HoReCa</div>
             <h1>LINE — Управление кухней</h1>
             <p>Единая система для ресторанов, кафе и сетей: <span class="highlight">маркировка по СанПиН</span>,
-                инвентаризация, контроль списаний и журналы ХАССП.</p>
-            <p style="font-size: 16px; font-weight: 700; color: #1A1A1A;">🌐 https://line-crm.com</p>
+                инвентаризация, контроль списаний, журналы ХАССП и учёт ТТК.</p>
+            <div class="hero-links">
+                <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="site-link">🌐
+                    Официальный сайт: https://line-crm.com</a>
+                <div class="hero-socials">
+                    <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer">✈️
+                        Telegram:
+                        @LineSass2026</a>
+                    <a href="https://instagram.com/doni.engineer" target="_blank" rel="noopener noreferrer">📸
+                        Instagram:
+                        @doni.engineer</a>
+                </div>
+            </div>
         </div>
         <div class="image-container">
             <img src="images/1-login.png" alt="Экран входа в LINE">
         </div>
-    </div>
+    </section>
 
-    <div class="slide" id="sec2">
+    <!-- СЛАЙД 2: КУХНЯ -->
+    <section class="slide" id="sec2">
         <div class="blob blob-1"></div>
         <div class="content">
             <div class="badge">Главный экран</div>
             <h2>Все разделы кухни в одном окне</h2>
-            <p>Интуитивный интерфейс для планшета и телефона повара. Осваивается за 10 минут без сложного обучения.</p>
+            <p>Понятный интерфейс для смартфона и планшета повара. Осваивается за 10 минут без тяжёлого обучения.</p>
             <ul class="feature-list">
-                <li>Работает без привязки к iiko и r_keeper</li>
-                <li>Мгновенный доступ к этикеткам, ревизии и журналам</li>
-                <li>Защищённая админ-панель для шефа и управляющего</li>
+                <li>Работает независимо от кассовых и учётных систем (iiko, r_keeper)</li>
+                <li>Быстрый доступ к этикеткам, ревизии, списаниям и журналам</li>
+                <li>Защищённая админ-панель для шефа, управляющего и сети</li>
             </ul>
         </div>
         <div class="image-container">
-            <img src="images/2-kitchen-menu.png" alt="Главное меню кухни LINE">
+            <img src="images/2-kitchen-menu.png.png" alt="Главное меню кухни LINE">
         </div>
-    </div>
+    </section>
 
-    <div class="slide" id="sec3">
+    <!-- СЛАЙД 3: МАРКИРОВКА -->
+    <section class="slide" id="sec3">
         <div class="blob blob-2"></div>
         <div class="content">
             <div class="badge">Модуль №1</div>
             <h2>Умная маркировка этикеток</h2>
-            <p>Автоматический расчёт сроков годности по базе и требованиям СанПиН. Печать в 1 клик.</p>
+            <p>Автоматический расчёт сроков годности по базе и требованиям СанПиН. Печать в пару касаний.</p>
             <ul class="feature-list">
-                <li>Продукты, Разморозка, Моющие средства, Хозтовары</li>
-                <li>Поддержка форматов <strong>58×60, 58×40, 60×29 и 29×60 мм</strong></li>
-                <li>Печать с Windows-планшетов, Android и iPhone</li>
+                <li>Продукты, полуфабрикаты, разморозка, моющие и хозтовары</li>
+                <li>Форматы этикеток <strong>58×60, 58×40, 60×29 и 29×60 мм</strong></li>
+                <li>Работа и печать с Windows-планшетов, Android и iPhone</li>
             </ul>
         </div>
         <div class="image-container">
             <div class="image-grid-2">
                 <img src="images/3-label-form.png" alt="Выбор продукта для маркировки">
-                <img src="images/3-label-preview.png" alt="Готовая этикетка LINE">
+                <img src="images/печать.png" alt="Готовая этикетка LINE">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="slide" id="sec4">
+    <!-- СЛАЙД 4: ХАССП / САНПИН -->
+    <section class="slide" id="sec4">
         <div class="blob blob-1"></div>
         <div class="content">
             <div class="badge">Модуль №2</div>
             <h2>Журналы ХАССП и СанПиН</h2>
-            <p>Готовность к проверке Роспотребнадзора каждый день без бумажных тетрадей.</p>
+            <p>Ежедневная готовность к проверкам без бумажных тетрадей и заполнения задним числом.</p>
             <ul class="feature-list">
-                <li>Ежедневный допуск сотрудников с подписью по PIN-коду</li>
-                <li>Контроль температур холодильников, фритюра и уборки</li>
-                <li>Выгрузка официального журнала в Excel за любой месяц</li>
+                <li>Ежедневный допуск сотрудников с подтверждением по PIN-коду</li>
+                <li>Учёт температур холодильников, фритюра и графиков уборки</li>
+                <li>Выгрузка журналов в Excel за нужный период в 1 клик</li>
             </ul>
         </div>
         <div class="image-container">
-            <img src="images/4-haccp.png" alt="Журнал здоровья ХАССП">
+            <img src="images/хассп.png" alt="Журнал здоровья ХАССП">
         </div>
-    </div>
-    <div class="slide" id="sec5">
+    </section>
+
+    <!-- СЛАЙД 5: ИНВЕНТАРИЗАЦИЯ -->
+    <section class="slide" id="sec5">
         <div class="blob blob-2"></div>
         <div class="content">
             <div class="badge">Модуль №3</div>
             <h2>Быстрая инвентаризация</h2>
-            <p>Подсчёт остатков по зонам хранения прямо со смартфонов поваров — в 3 раза быстрее бумажных ведомостей.
-            </p>
+            <p>Подсчёт остатков по зонам хранения со смартфонов и планшетов — без потери данных при сбоях связи.</p>
             <ul class="feature-list">
-                <li>Разделение по зонам (холодильники, склад, цеха, бар)</li>
-                <li>Персональный выбор сотрудника и подтверждение PIN-кодом</li>
-                <li>Мгновенная выгрузка итоговой ведомости в Excel</li>
+                <li>Разделение на зоны хранения (холодильники, склад, цеха, бар)</li>
+                <li>Выбор сотрудника и подтверждение личным PIN-кодом</li>
+                <li>Локальное сохранение черновика и автосинхронизация при восстановлении сети</li>
             </ul>
         </div>
         <div class="image-container">
             <div class="image-grid-2">
-                <img src="images/5-inventory-zones.png" alt="Зоны инвентаризации">
-                <img src="images/5-inventory-count.png" alt="Подсчёт остатков">
+                <img src="images/инвет_отчеты.png" alt="Зоны и статусы инвентаризации">
+                <img src="images/эксперт_инвентеризация.png" alt="Экспорт бланков инвентаризации">
             </div>
         </div>
-    </div>
-
-    <div class="slide" id="sec6">
+    </section> <!-- СЛАЙД 6: СПИСАНИЯ -->
+    <section class="slide" id="sec6">
         <div class="blob blob-1"></div>
         <div class="content">
             <div class="badge">Модуль №4</div>
             <h2>Контроль списаний</h2>
-            <p>Фиксация порчи, бракеража, проработки и питания персонала с телефона повара.</p>
+            <p>Прозрачная фиксация порчи, бракеража, проработок и питания персонала прямо на кухне.</p>
             <ul class="feature-list">
-                <li>Обязательная подпись личным 4-значным PIN-кодом</li>
-                <li>Защита от «левых» списаний и потерь на кухне</li>
-                <li>Сводные отчёты по причинам потерь для бухгалтерии</li>
-            </ul>
-        </div>
-        <div class="image-container">
-            <img src="images/6-writeoffs.png" alt="Модуль списаний с PIN-кодом">
-        </div>
-    </div>
-
-    <div class="slide" id="sec7">
-        <div class="blob blob-2"></div>
-        <div class="content">
-            <div class="badge">Модуль №5</div>
-            <h2>Технологические карты и Отчёты</h2>
-            <p>Единая база стандартов приготовления блюд с фото подачи и сводная аналитика для руководства.</p>
-            <ul class="feature-list">
-                <li>Автоматический расчёт выхода готового блюда и КБЖУ</li>
-                <li>Печать официальных ТТК в формат A4</li>
-                <li>Экспорт всех отчётов в Excel в 1 клик</li>
+                <li>Подтверждение каждой операции персональным 4-значным PIN-кодом</li>
+                <li>Снижение неучтённых потерь и спорных списаний</li>
+                <li>Наглядная аналитика по причинам списаний для управления и учёта</li>
             </ul>
         </div>
         <div class="image-container">
             <div class="image-grid-2">
-                <img src="images/7-ttk.png" alt="Технологическая карта ТТК">
-                <img src="images/7-reports.png" alt="Отчёты и аналитика">
+                <img src="images/pin_списание.png" alt="Подтверждение списания PIN-кодом">
+                <img src="images/аналитика_списание.png" alt="Аналитика списаний за смену">
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="slide column-slide" id="sec8">
-        <div class="blob blob-1"></div>
-        <h2 style="margin-bottom: 6px; z-index: 2;">Тарифы подключения (для 1 заведения)</h2>
-        <p style="font-size: 16px; margin-bottom: 10px; z-index: 2;">Для сетевых проектов от 3 точек — индивидуальные
-            условия и бесплатный пилот на 1 кухне.</p>
-
-        <div class="pricing-grid">
-            <div class="price-card">
-                <div class="card-tag orange">До 30 ноября!</div>
-                <div>
-                    <div class="plan-name">СТАРТ</div>
-                    <div class="plan-sub">Для небольших кафе и самостоятельного запуска</div>
-                    <div class="price">15 000 ₽</div>
-                    <div class="price-monthly">Далее 3 000 ₽/мес (1-й мес. бесплатно)</div>
-                    <ul class="plan-features">
-                        <li>Личный кабинет управления</li>
-                        <li>Самостоятельная загрузка из Excel</li>
-                        <li>Пошаговый гайд по настройке</li>
-                        <li>Поддержка в Telegram / WhatsApp</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card popular">
-                <div class="card-tag">Выбор 80% ресторанов</div>
-                <div>
-                    <div class="plan-name">ПОД КЛЮЧ</div>
-                    <div class="plan-sub">Полная настройка системы нашей командой</div>
-                    <div class="price">30 000 ₽</div>
-                    <div class="price-monthly">+ 3 000 ₽/мес (подписка и поддержка)</div>
-                    <ul class="plan-features">
-                        <li>Загрузка базы до 700 позиций</li>
-                        <li>Настройка ТТК (расчёт КБЖУ)</li>
-                        <li>Списания с телефонов поваров</li>
-                        <li>Подключение принтера и этикеток</li>
-                        <li>Табло контроля просрочки</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card">
-                <div>
-                    <div class="plan-name">ENTERPRISE</div>
-                    <div class="plan-sub">Для крупных ресторанов и сетевых проектов</div>
-                    <div class="price">50 000 ₽</div>
-                    <div class="price-monthly">+ 5 000 ₽/мес (приоритетный менеджер)</div>
-                    <ul class="plan-features">
-                        <li>Всё из тарифа «Под ключ»</li>
-                        <li>Импорт базы без ограничений</li>
-                        <li>Сводные отчёты для бухгалтерии</li>
-                        <li>Настройка под СанПиН и ХАССП</li>
-                        <li>Персональный менеджер</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="price-card vip">
-                <div class="card-tag orange">VIP-уровень</div>
-                <div>
-                    <div class="plan-name">PREMIUM</div>
-                    <div class="plan-sub">Максимальная автоматизация всех процессов</div>
-                    <div class="price">100 000 ₽</div>
-                    <div class="price-monthly">+ 10 000 ₽/мес (VIP-сопровождение 24/7)</div>
-                    <ul class="plan-features">
-                        <li>Всё из тарифа Enterprise + 9 зон</li>
-                        <li>Все модули этикеток, ХАССП, ревизии</li>
-                        <li>Загрузка базы до 1500 позиций</li>
-                        <li>Персональный менеджер 24/7</li>
-                        <li>Выездное обучение персонала</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="deadline-banner">
-            ⚠️ Важно: с <span>1 декабря 2026 года</span> тариф «СТАРТ» (15 000 ₽) закрывается. Успейте зафиксировать
-            подключение до 30 ноября!
-        </div>
-    </div>
-
-    <div class="slide" id="sec9">
-        <div class="blob blob-1"></div>
+    <!-- СЛАЙД 7: ТТК И ОТЧЁТЫ -->
+    <section class="slide" id="sec7">
         <div class="blob blob-2"></div>
         <div class="content">
-            <div class="badge">Старт работы</div>
-            <h2>Запустим пилот на вашей кухне за 1 день</h2>
-            <p>Посмотрите систему вживую на 15-минутной демонстрации и протестируйте её на одной вашей кухне перед
-                запуском всей сети.</p>
-            <div
-                style="margin-top: 20px; padding: 18px; background: #FFFFFF; border-radius: 14px; font-weight: 700; font-size: 17px; box-shadow: 0 8px 25px rgba(0,0,0,0.06);">
-                🌐 Сайт: https://line-crm.com <br>
-                💬 Telegram / WhatsApp: [Ваш контакт]
-            </div>
+            <div class="badge">Модуль №5</div>
+            <h2>Технологические карты и Отчёты</h2>
+            <p>Единый стандарт приготовления блюд с фото подачи и сводные отчёты для руководителя.</p>
+            <ul class="feature-list">
+                <li>Расчёт выхода готового блюда и показателей КБЖУ</li>
+                <li>Печать технологических карт в формат A4</li>
+                <li>Экспорт отчётов по ревизиям, списаниям и журналам в Excel</li>
+            </ul>
         </div>
         <div class="image-container">
-            <img src="images/9-admin-panel.png" alt="Админ-панель управления LINE">
+            <div class="image-grid-2">
+                <img src="images/созданиеТТК.png" alt="Технологическая карта ТТК">
+                <img src="images/удобно_поделится.png" alt="Экспорт и отправка отчётов">
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- СЛАЙД 8: ТАРИФЫ -->
+    <section class="slide column-slide" id="sec8">
+        <div class="blob blob-1"></div>
+        <h2 class="pricing-title">Тарифы подключения</h2>
+
+        <div class="urgency-banner">
+            🔥 <strong>Важно:</strong> с 1 декабря 2026 года тариф «СТАРТ» за 15 000 ₽ закрывается и больше не будет
+            доступен. Успейте оформить подключение до 30 ноября включительно!
+        </div>
+
+        <div class="pricing-grid">
+            <!-- КАРТОЧКА 1: СТАРТ -->
+            <article class="price-card">
+                <div class="card-tag orange">🔥 Только до 30 ноября</div>
+                <div>
+                    <div class="plan-name">СТАРТ</div>
+                    <div class="plan-sub">Тариф закрывается 1 декабря 2026 г.! Успейте подключиться до 30 ноября
+                        включительно (с 1 декабря минимальный вход — от 30 000 ₽).</div>
+                    <div class="price">15 000 ₽ <span class="price-note">(разово)</span></div>
+                    <div class="price-monthly">Далее 3 000 ₽/мес</div>
+                    <div class="promo-badge">🎁 Первый месяц подписки — бесплатно</div>
+                    <ul class="plan-features">
+                        <li>Личный кабинет для управления</li>
+                        <li>Самостоятельная загрузка базы из Excel</li>
+                        <li>Пошаговый гайд по настройке (покажем, как всё сделать)</li>
+                        <li>Поддержка в мессенджере (Telegram/WhatsApp), если что-то сломается</li>
+                    </ul>
+                    <div class="plan-exclude">
+                        <strong>Чего НЕТ в этом тарифе:</strong><br>
+                        Мы не загружаем базу за вас, но подробно подскажем и покажем, как это сделать самому.
+                    </div>
+                </div>
+                <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer"
+                    class="plan-btn">Выбрать Старт</a>
+            </article>
+
+            <!-- КАРТОЧКА 2: ПОД КЛЮЧ -->
+            <article class="price-card popular">
+                <div class="card-tag green">Выбор 80% ресторанов</div>
+                <div>
+                    <div class="plan-name">ПОД КЛЮЧ</div>
+                    <div class="plan-sub">Самый популярный выбор. Мы делаем всю работу за вас.</div>
+                    <div class="price">30 000 ₽ <span class="price-note">+ 3 000 ₽/мес</span></div>
+                    <div class="price-monthly">До 31.12.2026 подписка 3 000 ₽/мес фиксируется; с 01.01.2027 — 45 000 ₽ +
+                        7 900 ₽/мес</div>
+                    <ul class="plan-features">
+                        <li>Загрузка базы до 400 позиций (Excel в Telegram)</li>
+                        <li>Создание ТТК: шеф создаёт техкарту и сразу получает готовый расчёт КБЖУ</li>
+                        <li>Списание: повара вносят данные с телефона, шеф видит всё сразу</li>
+                        <li>Удалённая программная настройка печати на совместимом принтере</li>
+                        <li>Табло контроля сроков (просрочка)</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer"
+                    class="plan-btn gold">Начать
+                    внедрение</a>
+            </article>
+
+            <!-- КАРТОЧКА 3: ENTERPRISE -->
+            <article class="price-card">
+                <div>
+                    <div class="plan-name">ENTERPRISE</div>
+                    <div class="plan-sub">Для крупных банкетных залов и сетей.</div>
+                    <div class="price">50 000 ₽ <span class="price-note">+ 5 000 ₽/мес</span></div>
+                    <div class="price-monthly">До 31.12.2026 подписка 5 000 ₽/мес фиксируется; с 01.01.2027 — 75 000 ₽ +
+                        11 900 ₽/мес</div>
+                    <ul class="plan-features">
+                        <li>Всё из тарифа «Под ключ»</li>
+                        <li>Импорт базы любого объёма (без ограничений)</li>
+                        <li>Списание с телефонов поваров + сводные отчёты для бухгалтерии</li>
+                        <li>Расширенный модуль ТТК (расчёт выхода и КБЖУ)</li>
+                        <li>Настройка под жёсткие требования СанПиН и ХАССП</li>
+                        <li>Персональный менеджер (решает вопросы в приоритете)</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer" class="plan-btn">Обсудить
+                    Enterprise</a>
+            </article>
+
+            <!-- КАРТОЧКА 4: PREMIUM -->
+            <article class="price-card vip">
+                <div class="card-tag gold">👑 VIP-уровень</div>
+                <div>
+                    <div class="plan-name">PREMIUM</div>
+                    <div class="plan-sub">Максимальный уровень. Полная автоматизация всех процессов ресторана.</div>
+                    <div class="price">100 000 ₽ <span class="price-note">+ 10 000 ₽/мес</span></div>
+                    <div class="price-monthly">До 31.12.2026 подписка 10 000 ₽/мес фиксируется; с 01.01.2027 — 180 000 ₽
+                        + 18 000 ₽/мес</div>
+                    <ul class="plan-features">
+                        <li>Всё из тарифа Enterprise</li>
+                        <li>Этикетки: Продукты, Разморозка, Моющие, Хозтовары</li>
+                        <li>Учёт и Меню: Инвентаризация, Списание, Журнал ХАССП</li>
+                        <li>Админ-панель: Зоны, Отчёты, Импорт/Экспорт, Сотрудники, Идеи</li>
+                        <li>Мои ТТК: полный расчёт выхода и КБЖУ</li>
+                        <li>Первичная ручная загрузка и выверка базы до 1 500 позиций + безлимитный импорт</li>
+                        <li>Настройка всех 9 зон (холодильник, цеха, склад, суши, хоспер и др.)</li>
+                        <li>Персональный менеджер 24/7 и выездное обучение</li>
+                    </ul>
+                </div>
+                <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer"
+                    class="plan-btn gold">Стать Премиум</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- СЛАЙД 9: КОНТАКТЫ -->
+    <section class="slide column-slide" id="sec9">
+        <div class="blob blob-2"></div>
+        <div class="badge">Быстрый старт за 1 день</div>
+        <h2>Наведите идеальный порядок на кухне</h2>
+        <p class="cta-subtitle">Свяжитесь с нами удобным способом для подключения тарифа или бесплатной демонстрации
+            системы:</p>
+
+        <div class="contact-cards">
+            <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="contact-btn web-btn">
+                🌐 Официальный сайт: <strong>Line-crm</strong>
+            </a>
+            <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer"
+                class="contact-btn tg-btn">
+                ✈️ Telegram: <strong>Telegram</strong>
+            </a>
+            <a href="https://instagram.com/doni.engineer" target="_blank" rel="noopener noreferrer"
+                class="contact-btn ig-btn">
+                📸 Instagram: <strong>instagram</strong>
+            </a>
+        </div>
+    </section>
 
 </body>
 

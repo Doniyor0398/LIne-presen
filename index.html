@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>LINE — Коммерческое предложение и презентация</title>
@@ -18,7 +18,8 @@
     <nav class="navbar" aria-label="Навигация по презентации">
         <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="nav-logo">LINE •
             line-crm.com</a>
-        <div class="nav-links">
+
+        <div class="nav-links" id="navLinks">
             <a href="#sec1">Вход</a>
             <a href="#sec2">Кухня</a>
             <a href="#sec3">Маркировка</a>
@@ -30,7 +31,16 @@
             <a href="#sec8">Тарифы</a>
             <a href="#sec9">Контакты</a>
         </div>
-        <button type="button" class="print-btn" onclick="window.print()">📥 Скачать PDF</button>
+
+        <div class="nav-actions">
+            <button type="button" class="print-btn" onclick="window.print()">📥 Скачать PDF</button>
+            <button type="button" class="burger-btn" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false"
+                aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <!-- СЛАЙД 1: ВХОД -->
@@ -46,12 +56,10 @@
                 <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="site-link">🌐
                     Официальный сайт: https://line-crm.com</a>
                 <div class="hero-socials">
-                    <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer">✈️
-                        Telegram:
-                        @LineSass2026</a>
+                    <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer">✈️
+                        Telegram: @LineSass2026</a>
                     <a href="https://instagram.com/doni.engineer" target="_blank" rel="noopener noreferrer">📸
-                        Instagram:
-                        @doni.engineer</a>
+                        Instagram: @doni.engineer</a>
                 </div>
             </div>
         </div>
@@ -123,7 +131,6 @@
         </div>
     </section>
 
-
     <!-- СЛАЙД 4: ХАССП / САНПИН -->
     <section class="slide" id="sec4">
         <div class="blob blob-1"></div>
@@ -161,7 +168,9 @@
                 <img src="images/эксперт_инвентеризация.png" alt="Экспорт бланков инвентаризации">
             </div>
         </div>
-    </section> <!-- СЛАЙД 6: СПИСАНИЯ -->
+    </section>
+
+    <!-- СЛАЙД 6: СПИСАНИЯ -->
     <section class="slide" id="sec6">
         <div class="blob blob-1"></div>
         <div class="content">
@@ -206,7 +215,10 @@
     <!-- СЛАЙД 8: ТАРИФЫ -->
     <section class="slide column-slide" id="sec8">
         <div class="blob blob-1"></div>
-        <h2 class="pricing-title">Тарифы подключения</h2>
+        <div class="pricing-header">
+            <h2 class="pricing-title">Тарифы подключения (для 1 заведения / точки)</h2>
+            <p class="pricing-subtitle">Для сетей от 3 точек — индивидуальные условия и пилот на 1 кухне.</p>
+        </div>
 
         <div class="urgency-banner">
             🔥 <strong>Важно:</strong> с 1 декабря 2026 года тариф «СТАРТ» за 15 000 ₽ закрывается и больше не будет
@@ -215,9 +227,9 @@
 
         <div class="pricing-grid">
             <!-- КАРТОЧКА 1: СТАРТ -->
-            <article class="price-card">
+            <article class="price-card has-tag">
                 <div class="card-tag orange">🔥 Только до 30 ноября</div>
-                <div>
+                <div class="card-body">
                     <div class="plan-name">СТАРТ</div>
                     <div class="plan-sub">Тариф закрывается 1 декабря 2026 г.! Успейте подключиться до 30 ноября
                         включительно (с 1 декабря минимальный вход — от 30 000 ₽).</div>
@@ -235,14 +247,14 @@
                         Мы не загружаем базу за вас, но подробно подскажем и покажем, как это сделать самому.
                     </div>
                 </div>
-                <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer"
-                    class="plan-btn">Выбрать Старт</a>
+                <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer" class="plan-btn">Выбрать
+                    Старт</a>
             </article>
 
             <!-- КАРТОЧКА 2: ПОД КЛЮЧ -->
-            <article class="price-card popular">
+            <article class="price-card popular has-tag">
                 <div class="card-tag green">Выбор 80% ресторанов</div>
-                <div>
+                <div class="card-body">
                     <div class="plan-name">ПОД КЛЮЧ</div>
                     <div class="plan-sub">Самый популярный выбор. Мы делаем всю работу за вас.</div>
                     <div class="price">30 000 ₽ <span class="price-note">+ 3 000 ₽/мес</span></div>
@@ -257,13 +269,12 @@
                     </ul>
                 </div>
                 <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer"
-                    class="plan-btn gold">Начать
-                    внедрение</a>
+                    class="plan-btn green">Начать внедрение</a>
             </article>
 
             <!-- КАРТОЧКА 3: ENTERPRISE -->
             <article class="price-card">
-                <div>
+                <div class="card-body">
                     <div class="plan-name">ENTERPRISE</div>
                     <div class="plan-sub">Для крупных банкетных залов и сетей.</div>
                     <div class="price">50 000 ₽ <span class="price-note">+ 5 000 ₽/мес</span></div>
@@ -283,9 +294,9 @@
             </article>
 
             <!-- КАРТОЧКА 4: PREMIUM -->
-            <article class="price-card vip">
+            <article class="price-card vip has-tag">
                 <div class="card-tag gold">👑 VIP-уровень</div>
-                <div>
+                <div class="card-body">
                     <div class="plan-name">PREMIUM</div>
                     <div class="plan-sub">Максимальный уровень. Полная автоматизация всех процессов ресторана.</div>
                     <div class="price">100 000 ₽ <span class="price-note">+ 10 000 ₽/мес</span></div>
@@ -299,37 +310,77 @@
                         <li>Мои ТТК: полный расчёт выхода и КБЖУ</li>
                         <li>Первичная ручная загрузка и выверка базы до 1 500 позиций + безлимитный импорт</li>
                         <li>Настройка всех 9 зон (холодильник, цеха, склад, суши, хоспер и др.)</li>
-                        <li>Персональный менеджер 24/7 и выездное обучение</li>
+                        <li>Персональный менеджер 24/7 и выездное обучение (проезд и проживание в другие города/страны —
+                            отдельно)</li>
                     </ul>
                 </div>
                 <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer"
                     class="plan-btn gold">Стать Премиум</a>
             </article>
         </div>
+
+        <p class="offer-note">
+            Условия подключения, оплаты и предоставления ПО определяются <a href="https://line-crm.com" target="_blank"
+                rel="noopener noreferrer">Публичной офертой на сайте line-crm.com</a>. Оборудование и расходники в
+            стоимость тарифов не входят.
+        </p>
     </section>
 
     <!-- СЛАЙД 9: КОНТАКТЫ -->
     <section class="slide column-slide" id="sec9">
+        <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="badge">Быстрый старт за 1 день</div>
         <h2>Наведите идеальный порядок на кухне</h2>
-        <p class="cta-subtitle">Свяжитесь с нами удобным способом для подключения тарифа или бесплатной демонстрации
-            системы:</p>
+        <p class="cta-subtitle">Свяжитесь с нами удобным способом для подключения тарифа или бесплатной 15-минутной
+            демонстрации системы:</p>
 
         <div class="contact-cards">
             <a href="https://line-crm.com" target="_blank" rel="noopener noreferrer" class="contact-btn web-btn">
-                🌐 Официальный сайт: <strong>Line-crm</strong>
+                🌐 Сайт: <strong>line-crm.com</strong>
             </a>
-            <a href="https://t.me/LineSass2026/LineSass2026" target="_blank" rel="noopener noreferrer"
-                class="contact-btn tg-btn">
-                ✈️ Telegram: <strong>Telegram</strong>
+            <a href="https://t.me/LineSass2026" target="_blank" rel="noopener noreferrer" class="contact-btn tg-btn">
+                ✈️ Telegram: <strong>@LineSass2026</strong>
             </a>
             <a href="https://instagram.com/doni.engineer" target="_blank" rel="noopener noreferrer"
                 class="contact-btn ig-btn">
-                📸 Instagram: <strong>instagram</strong>
+                📸 Instagram: <strong>@doni.engineer</strong>
             </a>
         </div>
     </section>
+
+    <script>
+        (function () {
+            const burgerBtn = document.getElementById('burgerBtn');
+            const navLinks = document.getElementById('navLinks');
+            if (!burgerBtn || !navLinks) return;
+
+            const setOpen = (open) => {
+                navLinks.classList.toggle('is-open', open);
+                burgerBtn.classList.toggle('is-open', open);
+                burgerBtn.setAttribute('aria-expanded', String(open));
+            };
+
+            burgerBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                setOpen(!navLinks.classList.contains('is-open'));
+            });
+
+            navLinks.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => setOpen(false));
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !burgerBtn.contains(e.target)) {
+                    setOpen(false);
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') setOpen(false);
+            });
+        })();
+    </script>
 
 </body>
 
